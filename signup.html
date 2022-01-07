@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <title>Message for me</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="body-container">
+    <section id="signup1">
+      <div class="formdetail">
+        <label class="formlabel label-orange">Email:</label>
+        <input name="" id="email" class="input"></input>
+      </div>
+      <div class="formdetail">
+        <label class="formlabel label-orange">Password:</label>
+        <input name="" id="password" class="input"></input>
+      </div>
+      <div class="button-margin">
+        <a id="signup1-btn" class="btn">Next</a>
+      </div>
+    </section>
+
+
+    <section style="display: none;" id="signup2">
+      <h2 style="font-size: 2.5rem;">Here are 3 questions to help you figure:</h2>
+      <form>
+        <div class="formdetail">
+          <label class="formlabel label-orange">Who Are You?</label>
+          <textarea name="" id="who" cols="30" rows="5" placeholder="The story you tell yourself is the most important story, what is your story?"></textarea>
+        </div>
+        <div class="formdetail">
+          <label class="formlabel label-orange">What Do You Want Out Of Life?</label>
+          <textarea name="" id="what" cols="30" rows="5" placeholder="What matters?"></textarea>
+        </div>
+        <div class="formdetail">
+          <label class="formlabel label-orange">Why?</label>
+          <textarea name="" id="why" cols="30" rows="5" placeholder="You could do a lot of other things, so why does this matter?"></textarea>
+        </div>
+      </form>
+      <div class="button-margin">
+        <a id="signup2-btn" class="btn">Next</a>
+      </div>
+    </section>
+
+
+    <section style="display: none;" id="signup3">
+      <div class="formdetail">
+        <label class="formlabel">Craft Your Message:</label>
+        <textarea name="" id="message" cols="30" rows="5" placeholder="You could do a lot of other things, so why does this matter?"></textarea>
+      </div>
+      <div class="formdetail">
+        <label class="formlabel">Deliver:</label>
+        <div class="radiosContainer">
+          <label class="radioContainer">
+            <input id="deliver1" type="radio" name="deliver" value="Every Month" class="radio">
+            <span class="checkmark">Every Month</span>
+          </label>
+    
+          <label class="radioContainer">
+            <input id="deliver2" type="radio" name="deliver" value="Every 2 Weeks" class="radio">
+            <span class="checkmark">Every 2 Weeks</span>
+          </label>
+          <label class="radioContainer">
+            <input id="deliver3" type="radio" name="deliver" value="Every Week" class="radio">
+            <span class="checkmark">Every Week</span>
+          </label>
+          <label class="radioContainer">
+            <input id="deliver4" type="radio" name="deliver" value="Twice a Week" class="radio">
+            <span class="checkmark">Twice a Week</span>
+          </label>
+        </div>
+      </div>
+      <div class="formdetail">
+        <label class="formlabel">Send This To:</label>
+        <input name="" id="emailsend" placeholder="Your email" class="input"></input>
+      </div>
+      <div class="button-margin">
+        <a class="btn" id="send">Send</a>
+      </div>
+    </section>
+  </div>
+  
+  <script src="./assets/script/firebase.js" type="module"></script>
+  <script src="../assets/script/signup.js" type="module"></script>
+</body>
+</html>

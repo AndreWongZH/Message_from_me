@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <title>Message for me</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="body-container">
+    <section>
+      <div class="formdetail">
+        <label class="formlabel">Craft Your Message:</label>
+        <textarea name="" id="message" cols="30" rows="5" placeholder="You could do a lot of other things, so why does this matter?"></textarea>
+      </div>
+      <div class="formdetail">
+        <label class="formlabel">Deliver:</label>
+        <div class="radiosContainer">
+          <label class="radioContainer">
+            <input id="deliver1" type="radio" name="deliver" value="Every Month" class="radio">
+            <span class="checkmark">Every Month</span>
+          </label>
+    
+          <label class="radioContainer">
+            <input id="deliver2" type="radio" name="deliver" value="Every 2 Weeks" class="radio">
+            <span class="checkmark">Every 2 Weeks</span>
+          </label>
+          <label class="radioContainer">
+            <input id="deliver3" type="radio" name="deliver" value="Every Week" class="radio">
+            <span class="checkmark">Every Week</span>
+          </label>
+          <label class="radioContainer">
+            <input id="deliver4" type="radio" name="deliver" value="Twice a Week" class="radio">
+            <span class="checkmark">Twice a Week</span>
+          </label>
+        </div>
+      </div>
+      <div class="formdetail">
+        <label class="formlabel">Send This To:</label>
+        <input name="" id="emailsend" placeholder="Your email" class="input"></input>
+      </div>
+      <div class="button-margin">
+        <a class="btn" id="send">Send</a>
+      </div>
+    </section>
+  </div>
+  
+  <script src="./assets/script/firebase.js" type="module"></script>
+  <script src="../assets/script/addMessage.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message for me</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/dashboardStyle.css">
+</head>
+<body>
+  <div class="border-bottom">
+    <div class="body-container">
+      <nav class="dashboard-container">
+        <h2 class="color-orange">Message for me</h2>
+        <div class="nav-right">
+          <h3 id="email" class="color-grey" style="font-family: 'Courier New', Courier, monospace; margin-right: 1em;"></h3>
+          <a id="logout" class="nav-btn inverted">Logout</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="body-container dashboard">
+    <div class="ideas color-grey">
+      <h2 class="underline" style="text-align: center;">Here Are Some Message Ideas:</h3>
+      <div class="idea-panel">
+        <h3>1) Comfort</h3>
+        <p>You are going to face difficulty
+          eventually, write something for
+          yourself when you do.</p>
+      </div>
+      <div class="idea-panel">
+        <h3>2) Encourage Yourself</h3>
+        <p>Life’s hard, but you are stronger,
+          write something for yourself to keep
+          you going.</p>
+      </div>
+      <div class="idea-panel">
+        <h3>3) Motivate Yourself</h3>
+        <p>We all need a little push sometimes,
+          write something you know will motivate
+          you.</p>
+      </div>
+      <div class="idea-panel">
+        <h3>4) Reminder</h3>
+        <p>What is important to you that you
+          sometimes forget? Write it down for
+          you!</p>
+      </div>
+      <div class="idea-panel">
+        <h3>5) Build Habits</h3>
+        <p>Good Habits are worth the effort, but
+          it can be hard- we get! Write to
+          remind yourself.</p>
+      </div>
+      <div class="idea-panel">
+        <h3>6) Wisdom</h3>
+        <p>You know who has some wisdom to share?
+          Probably you! You have gone through
+          life, you have learnt something, share
+          it with your future-self so nobody
+          forgets!</p>
+      </div>
+      <div class="idea-panel">
+        <h3>7) Check In On Yourself</h3>
+        <p>Sometimes we don’t feel as good as we
+          should & sometimes we feel terrible.
+          Write something for your future-self
+          to remind them to take a break? To
+          take time to reflect. Just remember to
+          be there for yourself.</p>
+      </div>
+    </div>
+    <div class="dashboard-right">
+      <div class="aboutme">
+        <img src="./assets/images/sun.png" alt="sun face" class="sun">
+        <p style="width: 90%; margin: 0 auto;">I want to be the best in the world & I want to be a
+          thoughful human being that will be there for their
+          friends & family. I will do my best & I will become the
+          best person I can.</p>
+      </div>
+      <div class="messages">
+        <h3 style="align-self: flex-start; color: black;">Active Messages</h3>
+        <div id="message-list"></div>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/script/firebase.js" type="module"></script>
+  <script src="../assets/script/dashboard.js" type="module"></script>
+</body>
+</html>
