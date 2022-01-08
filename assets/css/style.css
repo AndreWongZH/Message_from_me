@@ -168,7 +168,8 @@ textarea::placeholder {
 
 .radiosContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 1em;
   flex-wrap: wrap;
   margin: 1em 0;
 }
