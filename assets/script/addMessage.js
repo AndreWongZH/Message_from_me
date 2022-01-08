@@ -21,14 +21,14 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
-const addMessage = () => {
+const addMessage = async () => {
   const message = document.getElementById('message').value;
   const delivers = document.getElementsByName('deliver');
   const name = document.getElementById('name').value;
   const emailsend = document.getElementById('emailsend').value;
 
   const triggerMessage = httpsCallable(functions, "triggerMessage");
-  triggerMessage({
+  await triggerMessage({
     name: name,
     email: emailsend,
     message: message,
