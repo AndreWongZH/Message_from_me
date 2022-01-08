@@ -17,7 +17,6 @@ onAuthStateChanged(auth, (user) => {
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/firebase.User
     const uid = user.uid;
-    console.log(user);
     window.location.href = "./dashboard.html";
   } else {
     // User is signed out
@@ -40,7 +39,6 @@ const signUp = () => {
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in
-      console.log("signup success");
       const user = userCredential.user;
       console.log('calling add about me');
       const addAboutMe = httpsCallable(functions, 'addAboutMe');
@@ -49,7 +47,6 @@ const signUp = () => {
         whatInput: what,
         whyInput: why,
       }).then((result) => {
-
       })
       console.log("calling trigger message");
       const triggerMessage = httpsCallable(functions, "triggerMessage");

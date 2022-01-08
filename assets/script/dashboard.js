@@ -19,7 +19,7 @@ const getMessages = async (uid) => {
     p.innerHTML = doc.data()['message'];
     div.appendChild(p);
     msglst.appendChild(div);
-    console.log(doc.data()['message'])
+    // console.log(doc.data()['message'])
   });
 
   const div = document.createElement('div');
@@ -44,25 +44,23 @@ const getAboutme = async (uid) => {
   const q = query(aboutRef, where('userId', '==', uid));
   const aboutQuerySnapshot = await getDocs(q);
   aboutQuerySnapshot.forEach((doc) => {
-    // console.log(`${doc.id} => ${doc.data()}`);
-    console.log(doc.data()['whatInput'])
-    console.log(doc.data()['whoInput'])
-    console.log(doc.data()['whyInput'])
+    // console.log(doc.data()['whatInput'])
+    // console.log(doc.data()['whoInput'])
+    // console.log(doc.data()['whyInput'])
+
+    document.getElementById('whatInput').innerHTML = doc.data()['whatInput']
   });
 }
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/firebase.User
-    console.log(user.uid)
+    // console.log(user.uid)
     const email = document.getElementById('email');
     email.innerHTML = user.email;
     getMessages(user.uid);
     getAboutme(user.uid);
   } else {
     // User is signed out
-    // ...
     window.location.href = "./index.html";
   }
 });
