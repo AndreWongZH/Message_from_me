@@ -34,6 +34,7 @@ const signUp = () => {
   const why = document.getElementById('why').value;
   const message = document.getElementById('message').value;
   const delivers = document.getElementsByName('deliver');
+  const name = document.getElementById('name').value;
   const emailsend = document.getElementById('emailsend').value;
 
   createUserWithEmailAndPassword(auth, email, password)
@@ -53,7 +54,7 @@ const signUp = () => {
       console.log("calling trigger message");
       const triggerMessage = httpsCallable(functions, "triggerMessage");
       triggerMessage({
-        name: "andre",
+        name: name,
         email: email,
         message: message,
       }).then((result) => {

@@ -24,11 +24,12 @@ onAuthStateChanged(auth, (user) => {
 const addMessage = () => {
   const message = document.getElementById('message').value;
   const delivers = document.getElementsByName('deliver');
+  const name = document.getElementById('name').value;
   const emailsend = document.getElementById('emailsend').value;
 
   const triggerMessage = httpsCallable(functions, "triggerMessage");
   triggerMessage({
-    name: "andre",
+    name: name,
     email: emailsend,
     message: message,
   }).then((result) => {
