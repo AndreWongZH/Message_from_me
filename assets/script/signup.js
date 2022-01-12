@@ -1,7 +1,6 @@
 import {
   getAuth,
   createUserWithEmailAndPassword,
-  onAuthStateChanged,
 } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
 import {
   getFunctions,
@@ -12,19 +11,7 @@ import { app } from "./firebase.js";
 const functions = getFunctions(app, "asia-east2");
 const auth = getAuth();
 
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/firebase.User
-    const uid = user.uid;
-    window.location.href = "./dashboard.html";
-  } else {
-    // User is signed out
-    // ...
-  }
-});
-
-const signUp = () => {
+const signUp = async () => {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
@@ -36,13 +23,13 @@ const signUp = () => {
   const name = document.getElementById('name').value;
   const emailsend = document.getElementById('emailsend').value;
 
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
+  await createUserWithEmailAndPassword(auth, email, password)
+    .then( async (userCredential) => {
       // Signed in
       const user = userCredential.user;
       console.log('calling add about me');
       const addAboutMe = httpsCallable(functions, 'addAboutMe');
-      addAboutMe({
+      await addAboutMe({
         whoInput: who,
         whatInput: what,
         whyInput: why,
@@ -50,7 +37,7 @@ const signUp = () => {
       })
       console.log("calling trigger message");
       const triggerMessage = httpsCallable(functions, "triggerMessage");
-      triggerMessage({
+      await triggerMessage({
         name: name,
         email: email,
         message: message,
@@ -63,6 +50,9 @@ const signUp = () => {
       const errorCode = error.code;
       const errorMessage = error.message;
     });
+  
+  // redirect after adding data successfully
+    window.location.href = "./dashboard.html";
 };
 
 const emailMessageUrl =

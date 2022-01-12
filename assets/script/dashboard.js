@@ -24,6 +24,7 @@ const getMessages = async (uid) => {
 
   const div = document.createElement('div');
   div.classList.add('message-container');
+  div.classList.add('add-container');
   const p = document.createElement('p');
   div.classList.add('message-container');
   p.classList.add('message');
