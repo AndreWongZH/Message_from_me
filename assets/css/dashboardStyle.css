@@ -11,14 +11,7 @@ body {
 
 .dashboard-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-right {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
 }
 
 .inverted {
@@ -28,15 +21,11 @@ body {
 
 .border-bottom {
   border-bottom: 1px solid var(--grey-color);
-}
-
-.dashboard {
-  display: flex;
-  margin-top: 2em;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 .ideas {
-  width: 30%;
   background-color: #6666663b;
   border-radius: 20px;
   display: flex;
@@ -70,27 +59,11 @@ body {
   text-align: start;
 }
 
-.dashboard-right {
-  width: 70%;
-  margin-left: 3em;
-}
-
-.messages {
-  display: flex;
-  flex-direction: column;
-}
-
 .sun {
   width: 60px;
   position: absolute;
   top: -25px;
   left: -25px;
-}
-
-#message-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
 }
 
 .message-container {
@@ -103,9 +76,17 @@ body {
   justify-content: center;
 }
 
+.message-header {
+  color: black;
+}
+
 .message {
   width: 70%;
   margin: 1em auto;
+}
+
+#message-list > .message-container {
+  margin-bottom: 1em;
 }
 
 .add-text {
@@ -125,4 +106,50 @@ body {
 .add-container:hover {
   outline: 2px solid var(--ascent-color);
   cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .underline {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .dashboard-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .dashboard {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 2em;
+  }
+
+  .ideas {
+    width: 30%;
+  }
+
+  .dashboard-right {
+    width: 70%;
+    margin-left: 3em;
+  }
+
+  #message-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  .message-header {
+    text-align: left;
+  }
 }

@@ -13,6 +13,10 @@
   --dash-bg-color: #F0E5DE;
 }
 
+img {
+  max-width: 100%;
+}
+
 .color-grey {
   color: var(--grey-color);
 }
@@ -58,12 +62,11 @@ nav {
   padding: 5em 0;
 }
 
-.mainimg {
-  width: 50%;
+.main-img {
+  width: 100%;
 }
 
 .step {
-  width: 55%;
   margin: 2em auto;
   display: flex;
   flex-direction: column;
@@ -89,7 +92,7 @@ nav {
 }
 
 .btn {
-  font-size: 1.7rem;
+  font-size: 1rem;
   padding: 0.05em 2.5em;
   border-radius: 20px;
   color: white;
@@ -105,20 +108,11 @@ nav {
 
 .underline {
   text-decoration: underline;
+  font-size: 1.5rem;
 }
 
 .info {
   margin: 5em 0;
-}
-
-.info-container {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-}
-
-.info-container > * {
-  flex-basis: 100%;
 }
 
 .info-img {
@@ -219,4 +213,37 @@ textarea::placeholder {
 
 .button-margin {
   margin: 2em 0;
+}
+
+@media (min-width: 600px) {
+
+  .main-img {
+    width: 50%;
+  }
+
+  .step {
+    width: 55%;
+  }
+
+  .btn {
+    font-size: 1.7rem;
+  }
+
+  .info-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .info-container > * {
+    flex-basis: 100%;
+  }
+
+  .underline {
+    font-size: 2.5rem;
+  }
+
+  /* for sign up */
+
+  
 }
